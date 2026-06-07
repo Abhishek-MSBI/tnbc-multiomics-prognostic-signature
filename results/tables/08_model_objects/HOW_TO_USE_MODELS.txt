@@ -1,0 +1,43 @@
+
+==========================================================
+HOW TO LOAD AND USE SAVED MODEL OBJECTS
+==========================================================
+
+# Load complete model objects
+model_objects <- readRDS('results_TNBC/LASSO_Cox/08_model_objects/complete_model_objects.rds')
+
+# Access components:
+final_genes <- model_objects$final_genes
+final_model <- model_objects$final_model
+cox_model <- model_objects$cox_model
+data <- model_objects$data
+
+# Load individual models
+lasso_model <- readRDS('results_TNBC/LASSO_Cox/08_model_objects/final_lasso_model.rds')
+cv_model <- readRDS('results_TNBC/LASSO_Cox/08_model_objects/cv_lasso_model.rds')
+cox_model <- readRDS('results_TNBC/LASSO_Cox/08_model_objects/cox_model.rds')
+
+# Load ROC objects
+roc_obj <- readRDS('results_TNBC/LASSO_Cox/08_model_objects/timeROC_object.rds')
+surv_roc <- readRDS('results_TNBC/LASSO_Cox/08_model_objects/survivalROC_objects.rds')
+
+# PREDICT ON NEW DATA:
+# 1. Prepare new data with same genes
+new_data <- ... # Your new expression data
+X_new <- as.matrix(new_data[, final_genes])
+
+# 2. Calculate risk scores
+risk_scores_new <- predict(lasso_model, newx = X_new, type = 'link')
+
+# 3. Classify into risk groups
+median_risk <- median(model_objects$risk_scores)
+risk_groups_new <- ifelse(risk_scores_new > median_risk, 'High', 'Low')
+
+# 4. Predict survival probabilities
+surv_prob_new <- predict(cox_model, 
+                          newdata = data.frame(Risk_Score = risk_scores_new),
+                          type = 'survival',
+                          times = c(365.25, 365.25*3, 365.25*5))
+
+==========================================================
+

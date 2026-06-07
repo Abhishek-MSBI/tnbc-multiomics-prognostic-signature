@@ -1,0 +1,12 @@
+"Metric","Value"
+"Total_Samples",115
+"Total_Genes",266
+"Events",18
+"Censored",97
+"Event_Rate_Percent",15.65
+"EPV",0.068
+"Min_Expression",1.38
+"Max_Expression",21.62
+"Min_Time",0.9
+"Max_Time",3506.1
+"Zero_Var_Genes",0

@@ -1,0 +1,89 @@
+"Group","Cell","N","Mean","Median","SD","Min","Max"
+"Normal","B cells memory",113,0.00031,0,0.00135,0,0.00949
+"Normal","B cells naive",113,0.09209,0.09073,0.04681,0,0.19226
+"Normal","Dendritic cells activated",113,0.01204,0.0077,0.01354,0,0.06427
+"Normal","Dendritic cells resting",113,0.00031,0,0.00187,0,0.01812
+"Normal","Eosinophils",113,0.00356,0,0.01099,0,0.08665
+"Normal","Macrophages M0",113,0.01749,0,0.04598,0,0.22965
+"Normal","Macrophages M1",113,0.0125,0.00748,0.01496,0,0.06918
+"Normal","Macrophages M2",113,0.32037,0.3115,0.11714,0.03871,0.66812
+"Normal","Mast cells activated",113,0.00329,0,0.0102,0,0.06399
+"Normal","Mast cells resting",113,0.07603,0.06493,0.05898,0,0.30303
+"Normal","Monocytes",113,0.02977,0.02666,0.01879,0,0.08252
+"Normal","NK cells activated",113,0.03948,0.03548,0.03104,0,0.1464
+"Normal","NK cells resting",113,0.01577,0.0083,0.01956,0,0.09497
+"Normal","Neutrophils",113,0.00239,0,0.01158,0,0.11154
+"Normal","Plasma cells",113,0.04427,0.02792,0.04433,0,0.21947
+"Normal","T cells CD4 memory activated",113,0.00049,0,0.00438,0,0.04562
+"Normal","T cells CD4 memory resting",113,0.25498,0.25131,0.08958,0.03872,0.48792
+"Normal","T cells CD4 naive",113,0,0,0,0,0
+"Normal","T cells CD8",113,0.06252,0.05979,0.04305,0,0.17348
+"Normal","T cells follicular helper",113,0.00538,0,0.01549,0,0.09115
+"Normal","T cells gamma delta",113,0,0,0,0,0
+"Normal","T cells regulatory (Tregs)",113,0.00697,0,0.01405,0,0.07015
+"Tumor","B cells memory",116,0.0023,0,0.00904,0,0.06465
+"Tumor","B cells naive",116,0.07174,0.05871,0.0618,0,0.30544
+"Tumor","Dendritic cells activated",116,0.01976,0.00401,0.03759,0,0.21056
+"Tumor","Dendritic cells resting",116,0.00575,0,0.01997,0,0.15227
+"Tumor","Eosinophils",116,0.00239,0,0.00876,0,0.04787
+"Tumor","Macrophages M0",116,0.17405,0.1201,0.14563,0,0.58975
+"Tumor","Macrophages M1",116,0.07602,0.06797,0.05657,0,0.37656
+"Tumor","Macrophages M2",116,0.16578,0.14603,0.10514,0,0.56915
+"Tumor","Mast cells activated",116,0.01024,0,0.02533,0,0.13303
+"Tumor","Mast cells resting",116,0.02832,0.01518,0.04043,0,0.25506
+"Tumor","Monocytes",116,0.01843,0.01659,0.01849,0,0.09524
+"Tumor","NK cells activated",116,0.02612,0.0136,0.04081,0,0.25672
+"Tumor","NK cells resting",116,0.02246,0.01735,0.02358,0,0.12071
+"Tumor","Neutrophils",116,0.00067,0,0.0038,0,0.03757
+"Tumor","Plasma cells",116,0.0366,0.01866,0.04823,0,0.24383
+"Tumor","T cells CD4 memory activated",116,0.01064,0,0.01958,0,0.1592
+"Tumor","T cells CD4 memory resting",116,0.21134,0.20517,0.08383,0,0.42892
+"Tumor","T cells CD4 naive",116,0,0,0,0,0
+"Tumor","T cells CD8",116,0.05446,0.04117,0.04726,0,0.18919
+"Tumor","T cells follicular helper",116,0.03438,0.02696,0.03052,0,0.16862
+"Tumor","T cells gamma delta",116,2e-05,0,0.00025,0,0.00265
+"Tumor","T cells regulatory (Tregs)",116,0.02854,0.02558,0.02627,0,0.0991
+"Low","B cells memory",12,0.002,0,0.00539,0,0.0183
+"Low","B cells naive",12,0.08946,0.06354,0.08946,0,0.27934
+"Low","Dendritic cells activated",12,0.01765,0.00288,0.02269,0,0.05854
+"Low","Dendritic cells resting",12,0,0,0,0,0
+"Low","Eosinophils",12,0.01609,0.012,0.01719,0,0.05434
+"Low","Macrophages M0",12,0.0828,0.07576,0.08982,0,0.25295
+"Low","Macrophages M1",12,0.03842,0.03729,0.03259,0,0.12342
+"Low","Macrophages M2",12,0.15998,0.16076,0.13176,0.00524,0.40341
+"Low","Mast cells activated",12,0.00918,0,0.02576,0,0.0886
+"Low","Mast cells resting",12,0.01422,0.00227,0.01921,0,0.0542
+"Low","Monocytes",12,0.04752,0.02388,0.05917,0,0.19239
+"Low","NK cells activated",12,0.03639,0.02962,0.0322,0,0.11688
+"Low","NK cells resting",12,0.03112,0.01454,0.0353,0,0.09164
+"Low","Neutrophils",12,0,0,0,0,0
+"Low","Plasma cells",12,0.0337,0.0077,0.05376,0,0.17625
+"Low","T cells CD4 memory activated",12,0.00425,0,0.0089,0,0.02739
+"Low","T cells CD4 memory resting",12,0.36623,0.35749,0.10505,0.21684,0.51189
+"Low","T cells CD4 naive",12,0.01242,0,0.03176,0,0.10763
+"Low","T cells CD8",12,0.01052,0,0.03301,0,0.11522
+"Low","T cells follicular helper",12,0.02539,0.01068,0.03286,0,0.09949
+"Low","T cells gamma delta",12,0,0,0,0,0
+"Low","T cells regulatory (Tregs)",12,0.00267,0,0.00926,0,0.03207
+"High","B cells memory",45,0.00943,0,0.0215,0,0.09255
+"High","B cells naive",45,0.05459,0.04479,0.05635,0,0.23931
+"High","Dendritic cells activated",45,0.02564,0.01343,0.03788,0,0.16871
+"High","Dendritic cells resting",45,0,0,0,0,0
+"High","Eosinophils",45,0.01402,0,0.02731,0,0.11325
+"High","Macrophages M0",45,0.11165,0.04835,0.13011,0,0.56039
+"High","Macrophages M1",45,0.04303,0.03598,0.04041,0,0.15591
+"High","Macrophages M2",45,0.16883,0.1757,0.10226,0,0.39936
+"High","Mast cells activated",45,0.01002,0,0.02678,0,0.11685
+"High","Mast cells resting",45,0.03768,0.01846,0.04655,0,0.17692
+"High","Monocytes",45,0.03196,0.02895,0.02844,0,0.14301
+"High","NK cells activated",45,0.06333,0.06168,0.04358,0,0.16542
+"High","NK cells resting",45,0.01372,0,0.02666,0,0.14397
+"High","Neutrophils",45,0.00071,0,0.00474,0,0.03182
+"High","Plasma cells",45,0.05855,0.01935,0.07901,0,0.28427
+"High","T cells CD4 memory activated",45,0.00246,0,0.00747,0,0.0397
+"High","T cells CD4 memory resting",45,0.29721,0.29609,0.0943,0.07956,0.4947
+"High","T cells CD4 naive",45,0.00457,0,0.01651,0,0.09418
+"High","T cells CD8",45,0.01337,0,0.03165,0,0.15607
+"High","T cells follicular helper",45,0.0314,0.01893,0.03547,0,0.14513
+"High","T cells gamma delta",45,0,0,0,0,0
+"High","T cells regulatory (Tregs)",45,0.00784,0,0.02208,0,0.09532
