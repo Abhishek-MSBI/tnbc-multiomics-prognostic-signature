@@ -1,6 +1,6 @@
 # A Multi-Omics Integrative Framework Reveals a 9-Gene Prognostic Signature in Triple-Negative Breast Cancer
 
-> **Note:** This repository hosts the analysis code and resources for Abhishek S R’s MSc Bioinformatics dissertation project at Garden City University. It is designed to be a clean, reproducible, and extensible framework for TNBC prognostic biomarker discovery using multi-omics integrative analysis.
+> **Note:** This repository hosts the analysis code and resources for the project "A multi omics integration framework revelas a 9 gene prognostic signarure in TNBC" It is designed to be a clean, reproducible, and extensible framework for TNBC prognostic biomarker discovery using multi-omics integrative analysis.
 
 ---
 
