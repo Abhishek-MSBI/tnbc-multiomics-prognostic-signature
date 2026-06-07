@@ -44,7 +44,7 @@ Two independent RNA-seq GEO datasets are used purely for *external validation* o
 These cohorts are never used in model training; they assess generalizability and cross-cohort robustness.[file:1]
 
 > **Dataset schematic / flow diagram**  
-> ![Dataset overview](results/plots/risk_score_distribution.tiff)
+> ![Dataset overview](results/plots/risk_score_distribution.png)
 
 ---
 
@@ -64,13 +64,13 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
     - Adjusted p-value (FDR) ≤ 0.05.[file:1]
 - **Outputs (suggested files):**
   - `results/deseq2_differential_expression.tsv`
-  - `results/plots/Volcano_plot_DESeq2.tif`
-  - `results/plots/Top50_DEG_heatmap_DESeq2.tif`
+  - `results/plots/Volcano_plot_DESeq2.png`
+  - `results/plots/Top50_DEG_heatmap_DESeq2.png`
 
 > **DESeq2 plots**  
-> - Volcano plot: ![DESeq2 volcano](results/plots/Volcano_plot_DESeq2.tif)  
-> - MA and dispersion: ![MA plot](results/plots/MA_plot_DESeq2.tif), ![Dispersion plot](results/plots/Dispersion_plot_DESeq2.tif)  
-> - Top 50 DEG heatmap: ![Top 50 DEGs](results/plots/Top50_DEG_heatmap_DESeq2.tif)
+> - Volcano plot: ![DESeq2 volcano](results/plots/Volcano_plot_DESeq2.png)  
+> - MA and dispersion: ![MA plot](results/plots/MA_plot_DESeq2.png), ![Dispersion plot](results/plots/Dispersion_plot_DESeq2.png)  
+> - Top 50 DEG heatmap: ![Top 50 DEGs](results/plots/Top50_DEG_heatmap_DESeq2.png)
 
 ### 3.2 Functional enrichment (GO / KEGG)
 
@@ -82,12 +82,12 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
 - **Outputs (suggested):**
   - `results/go_enrichment_degs.tsv`
   - `results/kegg_enrichment_degs.tsv`
-  - `results/plots/GO_BP_dotplot_publication.tiff`
-  - `results/plots/KEGG_dotplot.tiff`
+  - `results/plots/GO_BP_dotplot_publication.png`
+  - `results/plots/KEGG_dotplot.png`
 
 > **Enrichment plots**  
-> - GO BP dotplot: ![GO BP](results/plots/GO_BP_dotplot_publication.tiff)  
-> - KEGG dotplot: ![KEGG](results/plots/KEGG_dotplot.tiff)
+> - GO BP dotplot: ![GO BP](results/plots/GO_BP_dotplot_publication.png)  
+> - KEGG dotplot: ![KEGG](results/plots/KEGG_dotplot.png)
 
 ### 3.3 Co-expression network analysis (CEMiTool)
 
@@ -140,14 +140,14 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Risk stratification based on median risk score: clear separation of high- vs low-risk groups with highly significant log-rank p-value (≈ 5.38 × 10⁻⁸).[file:1]
 
 > **LASSO and survival plots**  
-> - Cross-validation curve: ![CV curve](results/plots/cv_curve_filtered.tiff)  
-> - Lambda stability: ![Lambda stability](results/plots/lambda_stability.tiff)  
-> - Selection frequency: ![Selection frequency](results/plots/selection_frequency_barplot.tiff)  
-> - Final coefficients: ![Final coefficients](results/plots/final_coefficients.tiff)  
-> - KM curve: ![Kaplan–Meier](results/plots/kaplan_meier_curve.tiff)  
-> - Time-dependent ROC / AUC: ![Time-dependent ROC](results/plots/time_dependent_ROC_curves.tiff), ![AUC over time](results/plots/AUC_over_time.tiff)  
-> - Calibration / bootstrap: ![Calibration](results/plots/calibration_plot.tiff), ![Bootstrap](results/plots/bootstrap_validation.tiff)  
-> - Individual ROC curves: ![Individual ROC](results/plots/individual_ROC_curves.tiff)
+> - Cross-validation curve: ![CV curve](results/plots/cv_curve_filtered.png)  
+> - Lambda stability: ![Lambda stability](results/plots/lambda_stability.png)  
+> - Selection frequency: ![Selection frequency](results/plots/selection_frequency_barplot.png)  
+> - Final coefficients: ![Final coefficients](results/plots/final_coefficients.png)  
+> - KM curve: ![Kaplan–Meier](results/plots/kaplan_meier_curve.png)  
+> - Time-dependent ROC / AUC: ![Time-dependent ROC](results/plots/time_dependent_ROC_curves.png), ![AUC over time](results/plots/AUC_over_time.png)  
+> - Calibration / bootstrap: ![Calibration](results/plots/calibration_plot.png), ![Bootstrap](results/plots/bootstrap_validation.png)  
+> - Individual ROC curves: ![Individual ROC](results/plots/individual_ROC_curves.png)
 
 ### 3.6 External validation of the 9-gene signature
 
@@ -168,8 +168,8 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Cross-cohort Wilcoxon p ≈ 0.59, indicating no cohort-specific bias in risk distribution.[file:1]
 
 > **Validation plots**  
-> - Risk score distribution: ![Risk distribution](results/plots/risk_score_distribution.tiff)  
-> - Risk vs outcome: ![Risk vs outcome](results/plots/risk_distribution_by_outcome.tiff)
+> - Risk score distribution: ![Risk distribution](results/plots/risk_score_distribution.png)  
+> - Risk vs outcome: ![Risk vs outcome](results/plots/risk_distribution_by_outcome.png)
 
 ### 3.7 Immune microenvironment analysis (CIBERSORT)
 
@@ -198,36 +198,19 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
 
 ---
 
-## 4. Repository structure (suggested)
+## 4. Current repository structure
 
-Below is a suggested layout for this repository. You can adjust as needed.
+The current layout of this repository is intentionally minimal and mirrors the actual directory structure on GitHub:[cite:11]
 
 ```text
 tnbc-multiomics-prognostic-signature/
-├── data/
-│   ├── tcga_brca_tnbc/           # Metadata and processed expression (no raw TCGA data in GitHub)
-│   ├── geo_gse142258/
-│   └── geo_gse142731/
-├── scripts/
-│   ├── 01_data_preprocessing.R
-│   ├── 02_deseq2_differential_expression.R
-│   ├── 03_go_kegg_enrichment.R
-│   ├── 04_cemitool_coexpression.R
-│   ├── 05_string_ppi_cinna_centrality.R
-│   ├── 06_lasso_cox_prognostic_model.R
-│   ├── 07_external_validation_geo.R
-│   └── 08_cibersort_immune_infiltration.R
-├── results/
-│   ├── tables/
-│   └── plots/
-├── images/                      # Final figures for README and manuscript
-├── docs/
-│   └── methods_notes.md         # Extra methodological details if needed
-├── poster/
-│   └── TNBC_9gene_poster.pdf    # Optional: conference / defense poster
-├── LICENSE
+├── data/        # Processed/derived data and metadata (no raw TCGA/GEO uploads)
+├── results/     # Analysis outputs, including plots used in the README
+├── scripts/     # R scripts implementing each analysis step
 └── README.md
 ```
+
+Additional folders such as `images/`, `docs/`, or `poster/` can be created later if needed to organize manuscript-ready figures, extended documentation, or presentation material.
 
 > **Important:** Do **not** upload raw TCGA or restricted GEO data directly to GitHub. Instead, provide scripts and instructions to download and pre-process data from the original sources.
 
@@ -293,7 +276,7 @@ You can refine these scripts into reproducible workflows (e.g., `targets`, `drak
 - High-risk TNBC patients exhibit transcriptional and immune features consistent with more aggressive disease and poorer prognosis.[file:1]
 - The optimism-corrected C-index and clean validation across independent cohorts support the potential clinical utility of this signature for risk stratification in TNBC.[file:1]
 
-You can expand this section with more detailed gene-level annotations and literature links in a separate `docs/biological_interpretation.md` file.
+You can expand this section with more detailed gene-level annotations and literature links in a separate documentation file later.
 
 ---
 
