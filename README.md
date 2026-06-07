@@ -70,9 +70,9 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - `results/plots/Top50_DEG_heatmap_DESeq2.png`
 
 > **DESeq2 plots**  
-> - Volcano plot: <img src="results/plots/Volcano_plot_DESeq2.png" alt="DESeq2 volcano" width="400">  
-> - MA and dispersion: <img src="results/plots/MA_plot_DESeq2.png" alt="MA plot" width="400">, <img src="results/plots/Dispersion_plot_DESeq2.png" alt="Dispersion plot" width="400">  
-> - Top 50 DEG heatmap: <img src="results/plots/Top50_DEG_heatmap_DESeq2.png" alt="Top 50 DEGs" width="400">
+> - Volcano plot: ![DESeq2 volcano](results/plots/Volcano_plot_DESeq2.png)  
+> - MA and dispersion: ![MA plot](results/plots/MA_plot_DESeq2.png), ![Dispersion plot](results/plots/Dispersion_plot_DESeq2.png)  
+> - Top 50 DEG heatmap: ![Top 50 DEGs](results/plots/Top50_DEG_heatmap_DESeq2.png)
 
 ### 3.2 Functional enrichment (GO / KEGG)
 
@@ -88,8 +88,8 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - `results/plots/KEGG_dotplot.png`
 
 > **Enrichment plots**  
-> - GO BP dotplot: <img src="results/plots/GO_BP_dotplot_publication.png" alt="GO BP" width="400">  
-> - KEGG dotplot: <img src="results/plots/KEGG_dotplot.png" alt="KEGG" width="400">
+> - GO BP dotplot: ![GO BP](results/plots/GO_BP_dotplot_publication.png)  
+> - KEGG dotplot: ![KEGG](results/plots/KEGG_dotplot.png)
 
 ### 3.3 Co-expression network analysis (CEMiTool)
 
@@ -142,14 +142,14 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Risk stratification based on median risk score: clear separation of high- vs low-risk groups with highly significant log-rank p-value (≈ 5.38 × 10⁻⁸).[file:1]
 
 > **LASSO and survival plots**  
-> - Cross-validation curve: <img src="results/plots/cv_curve_filtered.png" alt="CV curve" width="400">  
-> - Lambda stability: <img src="results/plots/lambda_stability.png" alt="Lambda stability" width="400">  
-> - Selection frequency: <img src="results/plots/selection_frequency_barplot.png" alt="Selection frequency" width="400">  
-> - Final coefficients: <img src="results/plots/final_coefficients.png" alt="Final coefficients" width="400">  
-> - KM curve: <img src="results/plots/kaplan_meier_curve.png" alt="Kaplan–Meier" width="400">  
-> - Time-dependent ROC / AUC: <img src="results/plots/time_dependent_ROC_curves.png" alt="Time-dependent ROC" width="400">, <img src="results/plots/AUC_over_time.png" alt="AUC over time" width="400">  
-> - Calibration / bootstrap: <img src="results/plots/calibration_plot.png" alt="Calibration" width="400">, <img src="results/plots/bootstrap_validation.png" alt="Bootstrap" width="400">  
-> - Individual ROC curves: <img src="results/plots/individual_ROC_curves.png" alt="Individual ROC" width="400">
+> - Cross-validation curve: ![CV curve](results/plots/cv_curve_filtered.png)  
+> - Lambda stability: ![Lambda stability](results/plots/lambda_stability.png)  
+> - Selection frequency: ![Selection frequency](results/plots/selection_frequency_barplot.png)  
+> - Final coefficients: ![Final coefficients](results/plots/final_coefficients.png)  
+> - KM curve: ![Kaplan–Meier](results/plots/kaplan_meier_curve.png)  
+> - Time-dependent ROC / AUC: ![Time-dependent ROC](results/plots/time_dependent_ROC_curves.png), ![AUC over time](results/plots/AUC_over_time.png)  
+> - Calibration / bootstrap: ![Calibration](results/plots/calibration_plot.png), ![Bootstrap](results/plots/bootstrap_validation.png)  
+> - Individual ROC curves: ![Individual ROC](results/plots/individual_ROC_curves.png)
 
 ### 3.6 External validation of the 9-gene signature
 
@@ -170,8 +170,8 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Cross-cohort Wilcoxon p ≈ 0.59, indicating no cohort-specific bias in risk distribution.[file:1]
 
 > **Validation plots**  
-> - Risk score distribution: <img src="results/plots/risk_score_distribution.png" alt="Risk distribution" width="400">  
-> - Risk vs outcome: <img src="results/plots/risk_distribution_by_outcome.png" alt="Risk vs outcome" width="400">
+> - Risk score distribution: ![Risk distribution](results/plots/risk_score_distribution.png)  
+> - Risk vs outcome: ![Risk vs outcome](results/plots/risk_distribution_by_outcome.png)
 
 ### 3.7 Immune microenvironment analysis (CIBERSORT)
 
@@ -184,19 +184,19 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Spearman correlations between 9-gene signature expression and immune cell fractions.[file:1]
 
 > **Immune infiltration plots**  
-> - Violin / boxplots: <img src="results/plots/01_Violin_Boxplot.png" alt="Immune violin" width="400">  
-> - Stacked barplots (per sample, per group): <img src="results/plots/02_Stacked_Bar_per_Sample.png" alt="Per sample" width="400">, <img src="results/plots/03_Mean_Stacked_Bar_by_Group.png" alt="Mean per group" width="400">  
-> - Boxplot grid by cell type: <img src="results/plots/04_Boxplot_Grid_by_CellType.png" alt="Boxplot grid" width="400">  
-> - Spearman correlation heatmap: <img src="results/plots/05_Spearman_Correlation_Heatmap.png" alt="Immune correlation" width="400">  
-> - Sample-wise immune heatmap: <img src="results/plots/06_Sample_Immune_Heatmap.png" alt="Immune heatmap" width="400">  
+> - Violin / boxplots: ![Immune violin](results/plots/01_Violin_Boxplot.png)  
+> - Stacked barplots (per sample, per group): ![Per sample](results/plots/02_Stacked_Bar_per_Sample.png), ![Mean per group](results/plots/03_Mean_Stacked_Bar_by_Group.png)  
+> - Boxplot grid by cell type: ![Boxplot grid](results/plots/04_Boxplot_Grid_by_CellType.png)  
+> - Spearman correlation heatmap: ![Immune correlation](results/plots/05_Spearman_Correlation_Heatmap.png)  
+> - Sample-wise immune heatmap: ![Immune heatmap](results/plots/06_Sample_Immune_Heatmap.png)  
 > - Additional immune plots: dotplot, ridge plot, Wilcoxon tests, etc.:  
->   - <img src="results/plots/07_Dot_Plot_Immune.png" alt="Immune dotplot" width="400">  
->   - <img src="results/plots/08_Ridge_Plot_Immune.png" alt="Immune ridge plot" width="400">  
->   - <img src="results/plots/09_Tumor_vs_Normal_Wilcoxon.png" alt="Tumor vs normal" width="400">  
->   - <img src="results/plots/10_Low_vs_High_Risk_Wilcoxon.png" alt="Low vs high risk" width="400">  
->   - <img src="results/plots/11_CIBERSORT_Pvalue_Distribution.png" alt="CIBERSORT p-values" width="400">  
->   - <img src="results/plots/12_Lollipop_Tumor_vs_Normal.png" alt="Lollipop TN vs N" width="400">  
->   - <img src="results/plots/14_Lollipop_Low_vs_High_Risk.png" alt="Lollipop low vs high" width="400">
+>   - ![Immune dotplot](results/plots/07_Dot_Plot_Immune.png)  
+>   - ![Immune ridge plot](results/plots/08_Ridge_Plot_Immune.png)  
+>   - ![Tumor vs normal](results/plots/09_Tumor_vs_Normal_Wilcoxon.png)  
+>   - ![Low vs high risk](results/plots/10_Low_vs_High_Risk_Wilcoxon.png)  
+>   - ![CIBERSORT p-values](results/plots/11_CIBERSORT_Pvalue_Distribution.png)  
+>   - ![Lollipop TN vs N](results/plots/12_Lollipop_Tumor_vs_Normal.png)  
+>   - ![Lollipop low vs high](results/plots/14_Lollipop_Low_vs_High_Risk.png)
 
 ---
 
