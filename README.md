@@ -6,6 +6,8 @@
 
 ## 1. Project overview
 
+![Project poster](images/poster.png)
+
 Triple-negative breast cancer (TNBC) is an aggressive, heterogeneous breast cancer subtype defined by the absence of estrogen receptor (ER), progesterone receptor (PR), and HER2 expression, accounting for ~10–20% of all breast cancers yet contributing disproportionately to mortality.[file:1]
 Because TNBC lacks approved targeted therapies for the entire patient population, there is a critical need for robust prognostic biomarkers that can stratify patients into clinically meaningful risk groups.[file:1]
 
@@ -44,7 +46,7 @@ Two independent RNA-seq GEO datasets are used purely for *external validation* o
 These cohorts are never used in model training; they assess generalizability and cross-cohort robustness.[file:1]
 
 > **Dataset schematic / flow diagram**  
-> ![Dataset overview](results/plots/risk_score_distribution.png)
+> *(To be added: e.g., `results/plots/dataset_schematic.png`)*
 
 ---
 
