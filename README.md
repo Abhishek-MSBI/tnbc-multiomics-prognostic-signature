@@ -308,6 +308,6 @@ Once your dissertation is deposited or a manuscript is published, you can update
 - **Author:** Abhishek S R  
 - **Affiliation:** MSc Bioinformatics, Department of Life Sciences, Garden City University, Bengaluru, India  
 - **GitHub:** https://github.com/Abhishek-MSBI  
-- **Email:** *(add your preferred contact email here)*
+- **Email:** *abhirathod2512@gmail.com*
 
 Feel free to open issues or pull requests if you adapt this framework, extend the analysis, or identify any bugs.
