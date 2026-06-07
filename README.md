@@ -198,36 +198,19 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
 
 ---
 
-## 4. Repository structure (suggested)
+## 4. Current repository structure
 
-Below is a suggested layout for this repository. You can adjust as needed.
+The current layout of this repository is intentionally minimal and mirrors the actual directory structure on GitHub:[cite:11]
 
 ```text
 tnbc-multiomics-prognostic-signature/
-├── data/
-│   ├── tcga_brca_tnbc/           # Metadata and processed expression (no raw TCGA data in GitHub)
-│   ├── geo_gse142258/
-│   └── geo_gse142731/
-├── scripts/
-│   ├── 01_data_preprocessing.R
-│   ├── 02_deseq2_differential_expression.R
-│   ├── 03_go_kegg_enrichment.R
-│   ├── 04_cemitool_coexpression.R
-│   ├── 05_string_ppi_cinna_centrality.R
-│   ├── 06_lasso_cox_prognostic_model.R
-│   ├── 07_external_validation_geo.R
-│   └── 08_cibersort_immune_infiltration.R
-├── results/
-│   ├── tables/
-│   └── plots/
-├── images/                      # Final figures for README and manuscript
-├── docs/
-│   └── methods_notes.md         # Extra methodological details if needed
-├── poster/
-│   └── TNBC_9gene_poster.pdf    # Optional: conference / defense poster
-├── LICENSE
+├── data/        # Processed/derived data and metadata (no raw TCGA/GEO uploads)
+├── results/     # Analysis outputs, including plots used in the README
+├── scripts/     # R scripts implementing each analysis step
 └── README.md
 ```
+
+Additional folders such as `images/`, `docs/`, or `poster/` can be created later if needed to organize manuscript-ready figures, extended documentation, or presentation material.
 
 > **Important:** Do **not** upload raw TCGA or restricted GEO data directly to GitHub. Instead, provide scripts and instructions to download and pre-process data from the original sources.
 
@@ -293,7 +276,7 @@ You can refine these scripts into reproducible workflows (e.g., `targets`, `drak
 - High-risk TNBC patients exhibit transcriptional and immune features consistent with more aggressive disease and poorer prognosis.[file:1]
 - The optimism-corrected C-index and clean validation across independent cohorts support the potential clinical utility of this signature for risk stratification in TNBC.[file:1]
 
-You can expand this section with more detailed gene-level annotations and literature links in a separate `docs/biological_interpretation.md` file.
+You can expand this section with more detailed gene-level annotations and literature links in a separate documentation file later.
 
 ---
 
