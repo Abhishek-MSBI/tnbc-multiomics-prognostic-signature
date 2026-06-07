@@ -43,8 +43,8 @@ Two independent RNA-seq GEO datasets are used purely for *external validation* o
 
 These cohorts are never used in model training; they assess generalizability and cross-cohort robustness.[file:1]
 
-> **Space for dataset schematic / flow diagram**  
-> *(Insert image here: e.g., `images/dataset_overview.png`)*
+> **Dataset schematic / flow diagram**  
+> ![Dataset overview](results/plots/risk_score_distribution.tiff)
 
 ---
 
@@ -64,11 +64,13 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
     - Adjusted p-value (FDR) ≤ 0.05.[file:1]
 - **Outputs (suggested files):**
   - `results/deseq2_differential_expression.tsv`
-  - `results/plots/volcano_tnbc_vs_normal.png`
-  - `results/plots/heatmap_top50_degs.png`
+  - `results/plots/Volcano_plot_DESeq2.tif`
+  - `results/plots/Top50_DEG_heatmap_DESeq2.tif`
 
-> **Space for DESeq2 plots**  
-> *(Insert volcano plot, MA plot, dispersion plot, heatmap: e.g., `images/deseq2_volcano.png`, `images/deseq2_heatmap.png`)*
+> **DESeq2 plots**  
+> - Volcano plot: ![DESeq2 volcano](results/plots/Volcano_plot_DESeq2.tif)  
+> - MA and dispersion: ![MA plot](results/plots/MA_plot_DESeq2.tif), ![Dispersion plot](results/plots/Dispersion_plot_DESeq2.tif)  
+> - Top 50 DEG heatmap: ![Top 50 DEGs](results/plots/Top50_DEG_heatmap_DESeq2.tif)
 
 ### 3.2 Functional enrichment (GO / KEGG)
 
@@ -80,11 +82,12 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
 - **Outputs (suggested):**
   - `results/go_enrichment_degs.tsv`
   - `results/kegg_enrichment_degs.tsv`
-  - `results/plots/go_bp_dotplot.png`
-  - `results/plots/kegg_dotplot.png`
+  - `results/plots/GO_BP_dotplot_publication.tiff`
+  - `results/plots/KEGG_dotplot.tiff`
 
-> **Space for enrichment plots**  
-> *(Insert GO/KEGG dotplots: e.g., `images/go_kegg_dotplots.png`)*
+> **Enrichment plots**  
+> - GO BP dotplot: ![GO BP](results/plots/GO_BP_dotplot_publication.tiff)  
+> - KEGG dotplot: ![KEGG](results/plots/KEGG_dotplot.tiff)
 
 ### 3.3 Co-expression network analysis (CEMiTool)
 
@@ -98,8 +101,8 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
 - **Intersection for downstream analysis:**
   - DEGs ∩ M3 module genes → 1,030 high-confidence genes.
 
-> **Space for module and Venn diagram**  
-> *(Insert module enrichment and DEG∩module Venn: e.g., `images/cemitool_modules.png`, `images/deg_module_venn.png`)*
+> **Module / intersection figure**  
+> *(You can export and save your CEMiTool module and Venn plots under `results/plots/` and embed here similarly.)*
 
 ### 3.4 PPI network construction and hub gene prioritization
 
@@ -111,8 +114,8 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Select 266 hub genes with centrality scores above the mean.[file:1]
 - **Examples of top hub genes:** IL6, ESR1, FN1, BCL2, MMP9, IGF1, PPARG, EGF, CXCL12.[file:1]
 
-> **Space for PPI and centrality visualizations**  
-> *(Insert PPI network and centrality ranking plots: e.g., `images/ppi_network.png`, `images/hub_gene_centrality.png`)*
+> **PPI / centrality plots**  
+> *(Embed your STRING/CINNA plots here once exported, e.g.: `results/plots/ppi_network.png`, `results/plots/hub_centrality.png`.)*
 
 ### 3.5 Survival analysis and LASSO-Cox model
 
@@ -136,8 +139,15 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Optimism-corrected C-index ≈ 0.851 (95% CI ≈ 0.786–0.905).[file:1]
   - Risk stratification based on median risk score: clear separation of high- vs low-risk groups with highly significant log-rank p-value (≈ 5.38 × 10⁻⁸).[file:1]
 
-> **Space for survival and LASSO plots**  
-> *(Insert cross-validation curve, coefficient paths, KM curves, ROC/time-dependent AUC: e.g., `images/lasso_cv.png`, `images/km_high_low_risk.png`)*
+> **LASSO and survival plots**  
+> - Cross-validation curve: ![CV curve](results/plots/cv_curve_filtered.tiff)  
+> - Lambda stability: ![Lambda stability](results/plots/lambda_stability.tiff)  
+> - Selection frequency: ![Selection frequency](results/plots/selection_frequency_barplot.tiff)  
+> - Final coefficients: ![Final coefficients](results/plots/final_coefficients.tiff)  
+> - KM curve: ![Kaplan–Meier](results/plots/kaplan_meier_curve.tiff)  
+> - Time-dependent ROC / AUC: ![Time-dependent ROC](results/plots/time_dependent_ROC_curves.tiff), ![AUC over time](results/plots/AUC_over_time.tiff)  
+> - Calibration / bootstrap: ![Calibration](results/plots/calibration_plot.tiff), ![Bootstrap](results/plots/bootstrap_validation.tiff)  
+> - Individual ROC curves: ![Individual ROC](results/plots/individual_ROC_curves.tiff)
 
 ### 3.6 External validation of the 9-gene signature
 
@@ -157,8 +167,9 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Clear separation of risk groups within each cohort (stratified boxplots, no overlap).
   - Cross-cohort Wilcoxon p ≈ 0.59, indicating no cohort-specific bias in risk distribution.[file:1]
 
-> **Space for validation plots**  
-> *(Insert risk score distributions, waterfall plots, cross-cohort comparisons: e.g., `images/validation_risk_scores.png`)*
+> **Validation plots**  
+> - Risk score distribution: ![Risk distribution](results/plots/risk_score_distribution.tiff)  
+> - Risk vs outcome: ![Risk vs outcome](results/plots/risk_distribution_by_outcome.tiff)
 
 ### 3.7 Immune microenvironment analysis (CIBERSORT)
 
@@ -170,13 +181,20 @@ Below is a conceptual breakdown of each step; you can mirror this in the reposit
   - Violin plots for differential infiltration patterns.
   - Spearman correlations between 9-gene signature expression and immune cell fractions.[file:1]
 
-- **Key immune findings:**
-  - High-risk tumors show elevated M0/M1 macrophages and activated NK cells compared to low-risk tumors.[file:1]
-  - IL12RB2 and BMP7 positively correlate with activated NK cells and CD4 memory-activated T cells.[file:1]
-  - RAD51 and SERPINE1 correlate positively with M0/M1 macrophages and negatively with M2 macrophages, resting CD4 memory T cells, and naïve B cells.[file:1]
-
-> **Space for immune infiltration plots**  
-> *(Insert CIBERSORT barplots, violin plots, and correlation heatmaps: e.g., `images/immune_infiltration.png`)*
+> **Immune infiltration plots**  
+> - Violin / boxplots: ![Immune violin](results/plots/01_Violin_Boxplot.png)  
+> - Stacked barplots (per sample, per group): ![Per sample](results/plots/02_Stacked_Bar_per_Sample.png), ![Mean per group](results/plots/03_Mean_Stacked_Bar_by_Group.png)  
+> - Boxplot grid by cell type: ![Boxplot grid](results/plots/04_Boxplot_Grid_by_CellType.png)  
+> - Spearman correlation heatmap: ![Immune correlation](results/plots/05_Spearman_Correlation_Heatmap.png)  
+> - Sample-wise immune heatmap: ![Immune heatmap](results/plots/06_Sample_Immune_Heatmap.png)  
+> - Additional immune plots: dotplot, ridge plot, Wilcoxon tests, etc.:  
+>   - ![Immune dotplot](results/plots/07_Dot_Plot_Immune.png)  
+>   - ![Immune ridge plot](results/plots/08_Ridge_Plot_Immune.png)  
+>   - ![Tumor vs normal](results/plots/09_Tumor_vs_Normal_Wilcoxon.png)  
+>   - ![Low vs high risk](results/plots/10_Low_vs_High_Risk_Wilcoxon.png)  
+>   - ![CIBERSORT p-values](results/plots/11_CIBERSORT_Pvalue_Distribution.png)  
+>   - ![Lollipop TN vs N](results/plots/12_Lollipop_Tumor_vs_Normal.png)  
+>   - ![Lollipop low vs high](results/plots/14_Lollipop_Low_vs_High_Risk.png)
 
 ---
 
@@ -205,6 +223,8 @@ tnbc-multiomics-prognostic-signature/
 ├── images/                      # Final figures for README and manuscript
 ├── docs/
 │   └── methods_notes.md         # Extra methodological details if needed
+├── poster/
+│   └── TNBC_9gene_poster.pdf    # Optional: conference / defense poster
 ├── LICENSE
 └── README.md
 ```
@@ -263,7 +283,7 @@ Rscript scripts/07_external_validation_geo.R
 Rscript scripts/08_cibersort_immune_infiltration.R
 ```
 
-You can refine these scripts into reproducible workflows (e.g., `targets`, `drake`, Snakemake, or Nextflow) as a future extension.
+You can refine these scripts into reproducible workflows (e.g., `targets`, `drake`, Snakemake`, or Nextflow) as a future extension.
 
 ---
 
